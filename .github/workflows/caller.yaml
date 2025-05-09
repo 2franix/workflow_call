@@ -3,4 +3,4 @@ on:
 
 jobs:
   call_the_other_workflow:
-    uses: .github/workflows/reusable.yaml@main
+    uses: ./.github/workflows/reusable.yaml@main
