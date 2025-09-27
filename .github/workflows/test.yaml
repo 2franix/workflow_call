@@ -1,0 +1,17 @@
+name: Deploy project
+"on":
+    workflow_dispatch:
+jobs:
+    deploy:
+        name: Deploy
+        runs-on: ubuntu-latest
+        steps:
+            - name: Dummy step
+              run: |
+                echo "host: ${{ matrix.host }}, pubkey: ${{ matrix.pubkey }}"
+        strategy:
+            matrix:
+                host:
+                    - latest
+                pubkey:
+                    - ${{ secrets.SSH_HOST_PUBKEY }}
